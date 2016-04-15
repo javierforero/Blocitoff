@@ -14,7 +14,9 @@ group :development do
 end
 
 group :development, :test do
-  gem 'rspec-rails', '~> 3.0'
+  gem 'rspec-rails', '~> 3.4.2'
+  gem 'shoulda'
+  gem 'factory_girl_rails', '~> 4.0'
 end
 
 # Use SCSS for stylesheets
@@ -57,4 +59,10 @@ group :development do
   gem 'spring'
 end
 
-  gem 'bootstrap-sass'
+gem 'bootstrap-sass'
+
+gem 'devise'
+
+gem 'figaro', '1.0'
+
+gem 'faker'
