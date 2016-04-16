@@ -14,4 +14,11 @@ RSpec.describe Devise::SessionsController do
       expect(response).to redirect_to(user_path(user))
     end
   end
+
+  describe "post sessions" do
+    it "returns sucess" do
+      get :new
+      expect(response).to have_http_status(:success)
+    end
+  end
 end
