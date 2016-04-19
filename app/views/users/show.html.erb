@@ -1,1 +1,12 @@
-<h1>users</h1>
+<div class="container">
+  <div class="row">
+    <h1>Welcome! <%= @user.name %></h1>
+      <div class="mid-col-4"></div>
+      <div class="mid-col-4"><%= image_tag @user.avatar_url(250)%></div>
+      <div class="mid-col-4"></div>
+    <small>email: <%= @user.email%>,</small>
+    <small>count of lists <%= @user.lists.count%></small>
+    <h2>To-do Lists </h2>
+    <p><%= render @user.lists %></p>
+ </div>
+</div>
