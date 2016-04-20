@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  let(:user){ User.create!(name: "john mack", email:"johnmac@email.com", password: "johnjohn!")}
+  let(:user){ create(:user)}
 
   it { is_expected.to validate_presence_of(:name)}
   it { is_expected.to validate_length_of(:name).is_at_least(1) }
@@ -13,7 +13,7 @@ RSpec.describe User, type: :model do
   describe "user attributes matches" do
 
     it "should have name, email, and password as user" do
-      expect(user).to have_attributes(name:"john mack", email: "johnmac@email.com")
+      expect(user).to have_attributes(name: user.name, email: user.email, password: user.password)
     end
   end
 end
