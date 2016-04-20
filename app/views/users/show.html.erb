@@ -5,8 +5,8 @@
       <div class="mid-col-4"><%= image_tag @user.avatar_url(250)%></div>
       <div class="mid-col-4"></div>
     <small>email: <%= @user.email%>,</small>
-    <small>count of lists <%= @user.lists.count%></small>
-    <h2>To-do Lists </h2>
-    <p><%= render @user.lists %></p>
+    <small>count of lists <%= @user.items.count%></small>
+    <h2>To-do Items </h2>
+    <p><%= render @user.items %></p>
  </div>
 </div>

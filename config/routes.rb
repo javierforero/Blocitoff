@@ -2,8 +2,9 @@ Rails.application.routes.draw do
 
   root 'welcome#index'
   devise_for :users
+
   resources :users do
-    resources :lists
+    resources :items, only: [:index, :create, :show]
   end
 
 end
