@@ -24,5 +24,18 @@ context "sign in as a user" do
       expect(response).to redirect_to user_path(my_user)
     end
   end
+
+  describe "Delete tests using ajax" do
+    it "deletes item from list" do
+      delete :destroy, format: :js, user_id: my_user, id: my_item
+      count = Item.where({id: my_item.id}).count
+      expect(count).to eq 0
+    end
+
+    it "has a success status" do
+      delete :destroy, format: :js, user_id: my_user, id: my_item
+      expect(response).to have_http_status(:success)
+    end
+  end
 end
 end
