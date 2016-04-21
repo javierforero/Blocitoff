@@ -7,7 +7,7 @@
     <small>email: <%= @user.email%>,</small>
     <small>count of lists <%= @user.items.count%></small>
     <h2>To-do Items </h2>
-    <p><%= render "items/item", item: @user.items %></p>
+    <%= render "items/items", items: @user.items %>
     <%= render "items/form", item: Item.new, user: @user %>
  </div>
 </div>
