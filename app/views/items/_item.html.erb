@@ -1,0 +1,4 @@
+<div class=<%= "item-#{item.id}" %>>
+  <%= link_to item.name, user_item_path(item.user, item)%>
+  <%= link_to "",[item.user, item], method: :delete,remote: true, class: "glyphicon glyphicon-ok" %><br>
+</div>

@@ -4,10 +4,10 @@
       <div class="mid-col-4"></div>
       <div class="mid-col-4"><%= image_tag @user.avatar_url(250)%></div>
       <div class="mid-col-4"></div>
-    <small>email: <%= @user.email%>,</small>
-    <small>count of lists <%= @user.items.count%></small>
+    <small>email: <%= @user.email%>, count of items: </small>
+    <small class="js-item-count"><%= @user.items.count%></small>
     <h2>To-do Items </h2>
-    <%= render "items/items", items: @user.items %>
+    <%= render @user.items %>
     <%= render "items/form", item: Item.new, user: @user %>
  </div>
 </div>
