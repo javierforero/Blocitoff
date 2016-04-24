@@ -1,5 +1,0 @@
-<% items.each do |item| %>
- <% item_class = 'item-' + item.id.to_s  %>
-  <%= link_to item.name, user_item_path(item.user, item), class: item_class %>
-  <%= link_to "",[item.user, item], method: :delete,remote: true, class: 'glyphicon glyphicon-ok'+ ' ' + item_class %><br>
-<% end %>

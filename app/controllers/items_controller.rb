@@ -14,14 +14,14 @@ class ItemsController < ApplicationController
   end
 
   def destroy
-    
+
      @user = User.find(params[:user_id])
      @item = @user.items.find(params[:id])
 
      if @item.destroy
-       flash[:notice] = "Item was deleted!"
+       flash.now[:notice] = "Item was deleted!"
      else
-       flash[:alert] = "Item was not deleted. Try again!"
+       flash.now[:alert] = "Item was not deleted. Try again!"
      end
 
     respond_to do |format|
