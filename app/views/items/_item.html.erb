@@ -1,4 +1,13 @@
 <div class=<%= "item-#{item.id}" %>>
-  <%= link_to item.name, user_item_path(item.user, item)%>
-  <%= link_to "",[item.user, item], method: :delete,remote: true, class: "glyphicon glyphicon-ok" %><br>
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-2"></div>
+    <div class="col-md-2">
+      <%= item.name %><br>
+      <small><%= "created #{distance_of_time_in_words(item.created_at, Time.now)} ago"%></small>
+    </div>
+    <div class="col-md-2"><%= link_to "",[item.user, item], method: :delete,remote: true, class: "glyphicon glyphicon-ok" %><br></div>
+    <div class="col-md-2"></div>
+    <div class="col-md-2"></div>
+  </div>
 </div>
