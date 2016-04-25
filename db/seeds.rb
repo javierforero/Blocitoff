@@ -24,6 +24,15 @@ users = User.all
   )
 end
 
+100.times do
+
+  Item.create!(
+  name: Faker::Lorem.sentence,
+  user: users.sample,
+  created_at: Faker::Time.between(DateTime.now - 7, DateTime.now - 50)
+  )
+end
+
 puts "seed finished"
 puts "#{User.count} users created"
 puts "#{Item.count} items created"
