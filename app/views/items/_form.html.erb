@@ -3,5 +3,5 @@
     <%= f.label "New item" %>
     <%= f.text_field :name,class: "form-control", placeholder: "Enter item" %>
   </div>
-  <%= f.submit "Add item", class: "btn btn-default pull-right" %>
+  <div onclick="blocmetrics.report(\"add item\")"><%= f.submit "Add item", class: "btn btn-default pull-right" %></div>
 <% end %>
