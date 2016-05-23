@@ -8,7 +8,7 @@ class ItemsController < ApplicationController
       flash[:notice] = "Your item was successfully saved!"
       redirect_to @user
     else
-      flash[:alert] = "Your item was not saved. Try again"
+      flash[:alert] = "Your item was not saved. Check that it's not empty and try again"
       redirect_to @user
     end
   end
