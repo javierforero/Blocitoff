@@ -29,6 +29,7 @@ class ItemsController < ApplicationController
       format.js
     end
   end
+  
   private
 
   def item_params
