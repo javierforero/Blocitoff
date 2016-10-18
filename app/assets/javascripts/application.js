@@ -19,10 +19,10 @@
 var blocmetrics = {};
 
 blocmetrics.report = function(eventName) {
-  var event = { event: { name: eventName, url:"http://localhost:4000/users/1" } };
+  var event = { event: { name: eventName, url:"https://blocitoff-javi.herokuapp.com/users/1" } };
   var request = new XMLHttpRequest();
 
-  request.open("POST", "http://localhost:3000/api/events", true);
+  request.open("POST", "https://blocmetrics-javi.herokuapp.com/api/events", true);
 
   request.setRequestHeader('Content-Type', 'application/json');
 
