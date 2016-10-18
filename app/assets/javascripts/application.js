@@ -19,7 +19,7 @@
 var blocmetrics = {};
 
 blocmetrics.report = function(eventName) {
-  var event = { event: { name: eventName, url:"https://blocitoff-javi.herokuapp.com/users/10" } };
+  var event = { event: { name: eventName, url:"https://blocitoff-javi.herokuapp.com" } };
   var request = new XMLHttpRequest();
 
   request.open("POST", "https://blocmetrics-javi.herokuapp.com/api/events", true);
